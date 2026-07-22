@@ -1,8 +1,28 @@
-<header>
+---
+const navItems = [
+    { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Contact", href: "/contact" },
+]
+---
 
-<nav>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-</nav>
+<header class="bg-white shadow">
+  <div class="container mx-auto px-4">
+    <nav class="flex items-center justify-between py-4">
+      <a href="/" class="text-xl font-bold">
+        My Site
+      </a>
 
+      <ul class="flex gap-6">
+        {navItems.map((item) => (
+          <li>
+            <a href={item.href} class="hover:text-blue-600">
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
 </header>
