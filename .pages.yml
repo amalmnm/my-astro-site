@@ -29,3 +29,7 @@ content:
       - name: servicesContent
         label: Services Content
         type: rich-text
+      
+      - name: aboutContent
+        label: About Content
+        type: rich-text
