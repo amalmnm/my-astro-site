@@ -1,5 +1,5 @@
 ---
 title: Home
-heroTitle: Welcome to My Website test sumit
+heroTitle: "Welcome to My first Website "
 heroText: "We build modern websites. "
 ---
