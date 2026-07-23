@@ -1,14 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { getEntry } from "astro:content";
+const home = await getEntry("pages", "home");
 ---
 
 <MainLayout>
 
 <h1 class="text-5xl font-bold text-red-600">
-  Hello Astro Tailwind test
+  {home.data.heroTitle}
 </h1>
 
-<p>Welcome to my website.</p>
+<p>{home.data.heroText}</p>
 <button class="bg-blue-500 p-5 rounded-lg">
 Button
 </button>

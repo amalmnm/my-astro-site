@@ -1,11 +1,13 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { getEntry } from "astro:content";
+const about = await getEntry("pages", "about");
 ---
 
 <MainLayout>
 
-<h1>About Us</h1>
+<h1>{about.data.heroTitle}</h1>
 
-<p>Welcome to our company.</p>
+<p>{about.data.heroText}</p>
 
 </MainLayout>
