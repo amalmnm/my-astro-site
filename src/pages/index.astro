@@ -2,6 +2,10 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { getEntry } from "astro:content";
 const home = await getEntry("pages", "home");
+
+if (!home) {
+  throw new Error("Home page not found");
+}
 ---
 
 <MainLayout>
@@ -11,8 +15,13 @@ const home = await getEntry("pages", "home");
 </h1>
 
 <p>{home.data.heroText}</p>
-<button class="bg-blue-500 p-5 rounded-lg">
-Button
-</button>
+
+ <h2 class="text-4xl font-bold">
+      {home?.data.servicesTitle}
+    </h2>
+
+    <p class="mt-5">
+      {home?.data.servicesContent}
+    </p>
 
 </MainLayout>

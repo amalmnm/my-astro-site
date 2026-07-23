@@ -21,3 +21,11 @@ content:
       - name: heroText
         label: Hero Text
         type: rich-text
+
+      - name: servicesTitle
+        label: Services Title
+        type: string
+
+      - name: servicesContent
+        label: Services Content
+        type: rich-text

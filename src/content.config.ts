@@ -7,6 +7,8 @@ const pages = defineCollection({
     title: z.string(),
     heroTitle: z.string().optional(),
     heroText: z.string().optional(),
+    servicesTitle: z.string().optional(),
+    servicesContent: z.string().optional(),
   }),
 });
 
